@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tables</title>
+</head>
+<body>
+    <h1>List of Tables</h1>
+    <ul>
+        {% for table in tables %}
+        <li>{{ table.table_name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

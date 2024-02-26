@@ -1,0 +1,23 @@
+azureopenai:
+  openai_api_key: 98f3b206951f43e3b7d3e29780c8cb81
+  openai_api_base: https://openainewfinal.openai.azure.com/
+  openai_api_version: 2023-07-01-preview
+  openai_api_type: azure
+  Azure_openai_deployment_35T_name: gpt-35-turbo
+  Azure_openai_deployment_4T_name: gpt-4
+  Azure_openai_deployment_35T_16k_name: gpt-35-turbo-16k
+  Azure_openai_deployment_4T_32k_name: gpt-4-32k
+  embedding_deployment: text-embedding-ada-002
+  azure_search_endpoint: https://demo-sig-search.search.windows.net
+  azure_search_key: eZMy1hVCldR3SRKR7IgDZu9rGNMsRYuqc6Wmq8m0bTAzSeDMSIVm
+  index_name: faq-chatbot-excelldata
+  driver: {SQL Server}
+  username: zee
+  password: P@ssw0rd
+  server: stream-data.database.windows.net
+  database: stream-data-db
+  Adls_connection_string: DefaultEndpointsProtocol=https;AccountName=synapsedemo1adls;AccountKey=VeI148dhDKwOSECssgNhsx9jtr70tOWX7b0BP8ZLhHstjcYb6ZJDKYprbNGwfJRWDabeJ1044t8D+AStVLursg==;EndpointSuffix=core.windows.net
+  Adls_container_name: adlsp
+  Adls_input_subfolder: inputpdf
+  Adls_vector_done_subfolder: donevectorpdf
+  Adls_error_pdf_subfolder: error_pdf_files

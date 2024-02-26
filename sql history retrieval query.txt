@@ -1,0 +1,47 @@
+#----------sql histry retrieval query-----------------
+
+SELECT CONCAT('You: ', question, ' ', timestamp) AS user_interaction,
+       CONCAT('GPT: ', answer, ' ', timestamp) AS gpt_response
+FROM history
+WHERE email = 'person@example.com'
+ORDER BY timestamp;
+
+
+##------------sql query in python-----------------------------
+
+import sqlite3
+
+# Connect to your database
+conn = sqlite3.connect('your_database_name.db')  # Replace 'your_database_name.db' with your database file name
+cursor = conn.cursor()
+
+# Execute the SQL query
+cursor.execute("SELECT CONCAT('You: ', question, ' ', timestamp) AS user_interaction, "
+               "       CONCAT('GPT: ', answer, ' ', timestamp) AS gpt_response "
+               "FROM history "
+               "WHERE email = 'person@example.com' "
+               "ORDER BY timestamp")
+
+# Fetch all the results
+results = cursor.fetchall()
+
+# Print the results
+for row in results:
+    print(row[0])
+    print(row[1])
+
+# Close the connection
+conn.close()
+
+
+
+
+<div class="container">
+        <h1>User History</h1>
+        <ul>
+            {% for row in results %}
+            <li>{{ row[0] }}</li>
+            <li>{{ row[1] }}</li>
+            {% endfor %}
+        </ul>
+</div>
